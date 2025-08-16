@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>💡 QRL — Hope for the Days to Come</title>
+  <meta name="description" content="A heartfelt story of a brother fighting for his sister and aging parents. QRL as a symbol of hope—inviting donations with sincerity, not compulsion." />
+  <meta property="og:title" content="QRL — Hope for the Days to Come" />
+  <meta property="og:description" content="Help create a decent life for his sister and parents. Every donation is a spark of hope." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="https://theqrl.org/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://theqrl.org/apple-touch-icon.png" />
+
+  <meta property="og:image" content="https://theqrl.org/assets/images/qrl-logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #0b1220cc;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #22d3ee;
+      --accent-2: #a78bfa;
+      --success: #34d399;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% 0%, #1e293b 0%, #0b1020 40%, #070b16 100%),
+                  linear-gradient(135deg, #0ea5e9 0%, #818cf8 100%);
+      background-blend-mode: overlay, normal;
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 4rem auto;
+      padding: 1rem;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(15,23,42,.85), rgba(2,6,23,.85));
+      border: 1px solid rgba(148,163,184,.2);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    header {
+      padding: 2.25rem 2rem 1.25rem;
+      border-bottom: 1px solid rgba(148,163,184,.15);
+      background: linear-gradient(90deg, rgba(34,211,238,.1), rgba(167,139,250,.08));
+    }
+    h1 {
+      margin: 0 0 .5rem;
+      font-size: clamp(1.6rem, 2.5vw + 1rem, 2.4rem);
+      line-height: 1.15;
+      letter-spacing: .2px;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: .98rem;
+    }
+    main { padding: 1.5rem 2rem 2rem; }
+    blockquote {
+      margin: 1rem 0 1.25rem;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid var(--accent);
+      background: rgba(2,6,23,.55);
+      color: #dbeafe;
+      font-style: italic;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    p { color: #d1d5db; line-height: 1.7; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: 1.2fr .8fr; }
+    }
+    .panel {
+      padding: 1rem 1.25rem;
+      background: rgba(2,6,23,.55);
+      border: 1px solid rgba(148,163,184,.18);
+      border-radius: var(--radius);
+    }
+    .goal {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: .75rem; flex-wrap: wrap;
+    }
+    .goal h3 { margin: .25rem 0; font-size: 1.1rem; }
+    .badge {
+      padding: .35rem .6rem; border-radius: 999px; font-size: .85rem;
+      background: linear-gradient(90deg, rgba(34,211,238,.15), rgba(167,139,250,.15));
+      border: 1px solid rgba(148,163,184,.24);
+      color: #e5e7eb;
+    }
+    .wallet {
+      display: grid; gap: .65rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      color: #e5e7eb;
+    }
+    code.addr {
+      word-break: break-all; display: block; padding: .75rem; border-radius: 12px;
+      background: rgba(2,6,23,.75); border: 1px dashed rgba(148,163,184,.35);
+      font-size: .95rem;
+    }
+    .actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .btn {
+      appearance: none; border: none; cursor: pointer; text-decoration: none;
+      padding: .85rem 1rem; border-radius: 12px; font-weight: 600; font-size: .98rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1020; box-shadow: 0 6px 18px rgba(56,189,248,.25);
+      transition: transform .05s ease, filter .2s ease;
+    }
+    .btn:hover { filter: brightness(1.05); }
+    .btn:active { transform: translateY(1px); }
+    .btn.secondary {
+      background: transparent; color: #e5e7eb;
+      border: 1px solid rgba(148,163,184,.3);
+      box-shadow: none;
+    }
+    footer { padding: 1rem 2rem 2rem; color: var(--muted); font-size: .9rem; }
+    .small { font-size: .92rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card" role="article" aria-labelledby="title">
+      <header>
+        <h1 id="title">💡 QRL — Hope for the Days to Come</h1>
+        <p class="subtitle">A gentle story—inviting without forcing, igniting hope for a sister and aging parents.</p>
+      </header>
+
+      <main>
+        <blockquote>
+          “True happiness is when we can see our loved ones living a decent life.”
+        </blockquote>
+
+        <p>
+          This is the story of an elder brother. His life is not easy. He doesn’t just fight for himself, but for his younger sister and his aging parents. Every drop of sweat, every effort he puts in, is only enough to get by day after day.
+        </p>
+        <p>
+          Sometimes he feels weary. But every time he looks at his beloved sister, every time he sees his parents smiling despite their hardships, he whispers to himself: <em>“I must not give up.”</em>
+        </p>
+        <p>
+          Reality seems unforgiving; his hard work has yet to bring them a better life. Until he discovered <strong>QRL (Quantum Resistant Ledger)</strong>. For many, QRL is a strong and visionary blockchain technology. But for him, QRL is a <strong>symbol of hope</strong>—a small doorway to a brighter future.
+        </p>
+
+        <div class="panel" aria-label="Main Quote">
+          <p class="small" style="margin:.1rem 0 .5rem;color:#c7d2fe">Quote</p>
+          <blockquote>
+            “This opportunity may not be for me personally. It is for my sister—so she can grow up with dignity. For my parents—so they can enjoy their old age without lacking. And for myself—so I never stop believing the future can change.”
+          </blockquote>
+        </div>
+
+        <div class="grid" style="margin-top:1.25rem">
+          <section class="panel" aria-label="Donation Goal">
+            <div class="goal">
+              <h3>🎯 Donation Goal</h3>
+              <span class="badge" aria-label="Target 25,000 QRL">Target: 25,000 QRL</span>
+            </div>
+            <p class="small">Every support is a smile for a growing sister and a breath of relief for aging parents.</p>
+          </section>
+
+          <section class="panel" aria-label="QRL Wallet Address">
+            <h3 style="margin-top:.25rem">💳 QRL Wallet</h3>
+            <div class="wallet">
+              <label for="addr" class="small">Donation Address</label>
+              <code id="addr" class="addr">a4e786c590caadf254a581d9c43d5c474a1550e18d557b1fd039b1c05898a483</code>
+              <div class="actions">
+                <button class="btn" id="copyBtn" aria-label="Copy wallet address">Copy Address</button>
+                <a class="btn secondary" href="https://explorer.theqrl.org/a/a4e786c590caadf254a581d9c43d5c474a1550e18d557b1fd039b1c05898a483" target="_blank" rel="noopener" aria-label="Open in QRL Explorer">Open in Explorer</a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" style="margin-top:1.25rem" aria-label="Gentle Call to Action">
+          <p>
+            Every donation is more than just a number. It is a simple message: <em>“We believe, and we care.”</em> If your heart is moved, join in to light up this hope—not by compulsion, but with sincerity.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Because hope is QRL in the days to come. Thank you for reading and sharing this story.
+        </p>
+        <p style="margin-top:1rem; color:#cbd5e1; font-style:italic;">
+          Respectfully,<br>
+          <strong>D. Prayogi</strong>
+        </p>
+      </footer>
+    </article>
+  </div>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const addrEl = document.getElementById('addr');
+      if (btn && addrEl) {
+        btn.addEventListener('click', async () => {
+          try {
+            const text = addrEl.textContent.trim();
+            await navigator.clipboard.writeText(text);
+            btn.textContent = 'Copied ✓';
+            btn.style.background = 'linear-gradient(135deg, var(--success), #86efac)';
+            setTimeout(() => {
+              btn.textContent = 'Copy Address';
+              btn.style.background = 'linear-gradient(135deg, var(--accent), var(--accent-2))';
+            }, 1800);
+          } catch (e) {
+            btn.textContent = 'Copy manually above';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
